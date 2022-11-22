@@ -107,6 +107,27 @@ public class ExerciciosPropostos2 {
 		System.out.println();
 		System.out.printf("Total: R$ %.2f", valorPagar);
 
+		/*
+		 * Você deve fazer um programa que leia um valor qualquer e apresente uma
+		 * mensagem dizendo em qual dos seguintes intervalos ([0,25], (25,50], (50,75],
+		 * (75,100]) este valor se encontra. Obviamente se o valor não estiver em nenhum
+		 * destes intervalos, deverá ser impressa a mensagem “Fora de intervalo”.
+		 */
+		double number;
+		System.out.println("Informe um número: ");
+		number = sc.nextDouble();
+
+		if (number >= 0 && number <= 25) {
+			System.out.println("está no intervalo [0,25]");
+		} else if (number >= 25 && number < 51) {
+			System.out.println("está no intervalo [25,50]");
+		} else if (number >= 50 && number <= 75) {
+			System.out.println("está no intervalo [50,75]");
+		} else if (number >= 75 && number <= 100) {
+			System.out.println("está no intervalo [75,100]");
+		} else {
+			System.out.println("fora de intervalo");
+		}
 	}
 
 }

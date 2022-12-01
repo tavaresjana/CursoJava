@@ -7,6 +7,25 @@ public class Product {
 	public double price;
 	public int quantity;
 
+	// construtor
+
+	// construtor padrão
+	public Product() {
+	}
+
+	// construtor c tds atributos como parametros
+	public Product(String name, double price, int quantity) {
+		this.name = name;
+		this.price = price;
+		this.quantity = quantity;
+	}
+
+	// construtor sobrecarga com atributos diferentes, mas mesma assinatura
+	public Product(String name, double price) {
+		this.name = name;
+		this.price = price;
+	}
+
 	// metodos
 	public double totalValueInStock() {
 		return price * quantity;

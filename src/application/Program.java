@@ -12,18 +12,20 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		Product product = new Product();
 		System.out.println("Entre com os dados do produto");
 
 		// coletando dados do produto
 		System.out.print("Name: ");
-		product.name = sc.nextLine();
+		String name = sc.nextLine();
 
 		System.out.print("Preço: ");
-		product.price = sc.nextDouble();
+		double price = sc.nextDouble();
 
 		System.out.print("Quantidade: ");
-		product.quantity = sc.nextInt();
+		int quantity = sc.nextInt();
+		
+		Product product = new Product(name, price, quantity);
+		
 
 		// exibindo produtos
 		System.out.println();
@@ -32,7 +34,7 @@ public class Program {
 		// add produtos
 		System.out.println();
 		System.out.print("Entre com o numero de produtos a serem adicionados: ");
-		int quantity = sc.nextInt();
+		quantity = sc.nextInt();
 		product.addProducts(quantity);
 
 		// exibindo atualização dos produtos

@@ -3,11 +3,16 @@ package entities;
 public class Product {
 
 	// atributos
-	public String name;
-	public double price;
-	public int quantity;
+	String name;
+	private double price;
+	private int quantity;
 
-	// construtor
+	/*
+	 * Não é necessário construir na mão os construtores e gets/sets, basta usar o
+	 * botão direito e seguir esse passo:
+	 *  -> Construtor - Source - Generate Constructor using Fields. 
+	 *  -> Getters & Setters - Source - Generate Getters and Setters.
+	 */
 
 	// construtor padrão
 	public Product() {
@@ -24,6 +29,27 @@ public class Product {
 	public Product(String name, double price) {
 		this.name = name;
 		this.price = price;
+	}
+
+	// getters and setters
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public int getQuantity() {
+		return quantity;
 	}
 
 	// metodos

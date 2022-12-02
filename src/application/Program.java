@@ -24,9 +24,13 @@ public class Program {
 		System.out.print("Quantidade: ");
 		int quantity = sc.nextInt();
 		
-		Product product = new Product(name, price, quantity);
+		Product product = new Product(name, price);
 		
-
+		product.setName("Computador");
+		System.out.println("Nome atualizado: "+product.getName());
+		product.setPrice(1200.00);
+		System.out.println("Preço atualizado: "+product.getPrice());
+		
 		// exibindo produtos
 		System.out.println();
 		System.out.println("Produto: " + product);
@@ -40,7 +44,8 @@ public class Program {
 		// exibindo atualização dos produtos
 		System.out.println();
 		System.out.println("Atualização: " + product);
-
+		
+		// remove produtos
 		System.out.println();
 		System.out.print("Entre com o numero de produtos a serem removidos: ");
 		quantity = sc.nextInt();
